@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+*
+{
+	margin:0px;
+	padding:0px;
+}
+.vertical-center
+{
+	margin-bottom:0px;
+	background-size:cover;
+}
+.vertical-center p
+{
+	color:#FFF;
+}
+.social
+{
+	font-size:28px;
+	clear:both;
+}
+.social a
+{
+	padding:3px;
+	clear:both;
+	color:#333;
+}
+.social a:hover
+{
+	color:#000;
+}
+
+
