@@ -1,5 +1,3 @@
-import {Table} from './table';
-
 export class App {
    
 	heading = "Table Component";
@@ -14,8 +12,76 @@ export class App {
 
 	showError = false;
 
+	dummyData: any = [
+		    {
+		        "Id": 1,
+		        "Name": "Manoj",
+		        "DOB": "13/02/1973",
+		        "Gender": "Male",
+		        "Address": "E501, Bengaluru"
+		    },
+			{
+		        "Id": 2,
+		        "Name": "Sal",
+		        "DOB": "11/02/1973",
+		        "Gender": "Male",
+		        "Address": "London"
+			},
+			{
+		        "Id": 3,
+		        "Name": "Raj",
+		        "DOB": "03/02/1994",
+		        "Gender": "Male",
+		        "Address": "Jaipur"
+		    },
+		    {
+		        "Id": 7,
+		        "Name": "Mark",
+		        "DOB": "12/03/1972",
+		        "Gender": "Male",
+		        "Address": "Jaipur"
+		    },
+		    {
+		        "Id": 9,
+		        "Name": "Ema",
+		        "DOB": "12/03/1972",
+		        "Gender": "Female",
+		        "Address": "California"
+		    },
+		    {
+		        "Id": 6,
+		        "Name": "Meghraj",
+		        "DOB": "12/03/1972",
+		        "Gender": "Male",
+		        "Address": "Jodhpur"
+		    },
+		    {
+		        "Id": 4,
+		        "Name": "Meghraj",
+		        "DOB": "12/03/1972",
+		        "Gender": "Male",
+		        "Address": "Jodhpur"
+		    },
+		    {
+		        "Id": 5,
+		        "Name": "Ram",
+		        "DOB": "12/03/1972",
+		        "Gender": "Male",
+		        "Address": "Jodhpur"
+		    },
+		    {
+		        "Id": 8,
+		        "Name": "Sushil",
+		        "DOB": "12/03/1972",
+		        "Gender": "Male",
+		        "Address": "Jodhpur"
+		    }
+		];
+
 	createTable(){
 		if(this.userInput){
+			this.showError = false; //HIDING ERROR
+
 			let inputObject = JSON.parse(this.userInput);
 			this.users = inputObject;
 			this.perUsers = inputObject; //STORING FOR SEARCHING PURPOSE
@@ -55,6 +121,12 @@ export class App {
 	        return ((item.Name.toLowerCase().indexOf(keyword.toLowerCase()) > -1) || (item.Gender.toLowerCase().indexOf(keyword.toLowerCase()) > -1) || (item.Address.toLowerCase().indexOf(keyword.toLowerCase()) > -1));
 	    }); 
 	}
+
+	addJSON(){
+		this.userInput = JSON.stringify(this.dummyData);
+	}
+
+	
 /*
 	createTable(inputObject){
     	var domElement = document.getElementById('userTable');
