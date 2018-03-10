@@ -4,7 +4,7 @@
 	<h3>${heading} - <button click.trigger="addJSON()" class="button">Dummy JSON Data</button></h3>
  
 	<form submit.trigger="createTable()">
-		<textarea value.bind="userInput" rows="15" cols="100"></textarea><br>
+		<textarea value.bind="userInput" rows="15" cols="80"></textarea><br>
 		<p class="danger" if.bind="showError">Please enter a valid JSON array to create table.</p>
 		<button type="submit" class="button">Create Table</button>
 	</form>
