@@ -1,0 +1,40 @@
+<template>
+	<require from="./styles.css"></require>
+
+	<h1>${heading}</h1>
+
+	<form submit.trigger="createTable()">
+		<textarea value.bind="userInput" rows="15" cols="100"></textarea><br>
+		<p class="danger" if.bind="showError">Please enter a valid JSON array to create table.</p>
+		<button type="submit" class="button">Create Table</button>
+	</form>
+
+
+	<div if.bind="users.length > 0">
+		<select class="marginTop15 selectWidth" value.bind="sortingType">
+			<option value="">Choose...</option>
+			<option repeat.for="header of tableHeader">${header}</option>
+		</select>
+		<button click.trigger="sortTable()" class="button">Sort</button>
+
+		<input class="right-align" type="text" value.bind="searchString" placeholder="Search..." keyup.trigger="setFilteredItems()">
+
+	    <table border="1" class="table">
+	        <thead>
+	        <tr>
+	        	<th repeat.for="header of tableHeader">${header}</th>	
+	        </tr>
+	        </thead>
+	        <tbody>
+	        <tr repeat.for="user of perUsers">
+	        	<td>${user.Id}</td>
+	        	<td>${user.Name}</td>
+	            <td>${user.DOB}</td>
+	            <td>${user.Gender}</td>
+	            <td>${user.Address}</td>
+	        </tr>
+	        <p if.bind="perUsers.length == 0" class="danger">No user found</p>
+	        </tbody>
+	    </table>
+    </div>
+</template>

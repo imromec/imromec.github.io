@@ -1,0 +1,27 @@
+body{
+	margin: 5% 20%;
+}
+.button{
+	background-color: #576396;
+	margin-top: 10px;
+	clear: both;
+	color: #fff;
+	padding: 5px 10px;
+}
+.marginTop15{
+	margin-top: 15px;
+}
+.selectWidth{
+	width: 150px;
+	height: 15px;
+}
+.table{
+	width: 92%;
+	margin-top: 15px;
+}
+.danger{
+	color: red;
+}
+.right-align{
+	margin-left: 20px;
+}
