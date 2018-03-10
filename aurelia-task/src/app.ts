@@ -102,7 +102,7 @@ export class App {
 
 	sortTable(){
 	 	let key = this.sortingType;
-	 	this.users.sort(function(var1, var2) {
+	 	this.perUsers.sort(function(var1, var2) {
         	var row1 = var1[key], row2 = var2[key];
        
 	        return ((row1 < row2) ? -1 : ((row1 > row2) ? 1 : 0));
